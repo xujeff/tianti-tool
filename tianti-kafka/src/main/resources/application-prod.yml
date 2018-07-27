@@ -1,0 +1,22 @@
+server:
+  port: 8000
+spring:
+  data:
+    kafka:
+       producer:
+        #kafka集群以逗号分隔
+        servers: 127.0.0.1:9092
+        retries: 0
+        batchSize: 16384
+        linger: 1
+        bufferMemory: 33554432
+
+       consumer:
+        #kafka集群以逗号分隔
+        servers: 127.0.0.1:9092
+        enableAutoCommit: true
+        sessionTimeout: 6000
+        autoCommitInterval: 100
+        autoOffsetReset: latest
+        groupId: tianti-kafka
+        concurrency: 3

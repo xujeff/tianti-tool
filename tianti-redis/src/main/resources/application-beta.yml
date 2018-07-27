@@ -1,0 +1,18 @@
+server:
+  port: 8001
+spring:
+  data:
+    redis:
+      maxTotal: 100
+      maxIdle: 20
+      numTestsPerEvictionRun: 1024
+      timeBetweenEvictionRunsMillis: 30000
+      minEvictableIdleTimeMillis: 1800000
+      softMinEvictableIdleTimeMillis: 10000
+      maxWaitMillis: 1500
+      testOnBorrow: true
+      testWhileIdle: true
+      blockWhenExhausted: false
+      maxRedirects: 5
+      #多个值以逗号分隔
+      clusters: 127.0.0.1:6379,127.0.0.1:6380

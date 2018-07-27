@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.jeff</groupId>
+	<artifactId>tianti-tool</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>tianti-tool</name>
+	<description>provide various tool</description>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.3.RELEASE</version>
+	</parent>
+
+	<modules>
+		<module>tianti-kafka</module>
+		<module>tianti-redis</module>
+		<module>tianti-readwrite</module>
+		<module>tianti-swagger</module>
+	</modules>
+
+	<properties>
+		<!-- 定义资源文件的编码格式 -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- 定义JDK版本 -->
+		<jdk.version>1.8</jdk.version>
+		<!-- 定义Spring Boot版本 -->
+		<spring.boot.version>1.5.3.RELEASE</spring.boot.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring.boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter</artifactId>
+				<version>${spring.boot.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-test</artifactId>
+				<version>${spring.boot.version}</version>
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<encoding>${project.build.sourceEncoding}</encoding>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

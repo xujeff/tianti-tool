@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.jeff</groupId>
+		<artifactId>tianti-tool</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<groupId>com.jeff.tianti-tool</groupId>
+	<artifactId>tianti-kafka</artifactId>
+	<name>tianti-kafka</name>
+	<description>provide kafka demo</description>
+
+	<dependencies>
+		<!-- Spring Boot 依赖start -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- Spring Boot 依赖end -->
+
+		<!-- kafka依赖 start -->
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+		</dependency>
+		<!-- kafka依赖 end -->
+
+	</dependencies>
+
+	<build>
+		<finalName>tianti-kafka</finalName>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.properties</include>
+					<include>**/*.xml</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.*</include>
+				</includes>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

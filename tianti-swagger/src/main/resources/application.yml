@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: tianti-redis
+  profiles:
+    active: beta
+    #如果是生产环境，则将beta改成prod
