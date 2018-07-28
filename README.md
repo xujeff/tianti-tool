@@ -1,5 +1,5 @@
 # tianti-tool
-本Project持续提供常见应用的包装类，目前包括：redis、kafka、mysql数据库读写分离操作、swagger的demo使用等等。该Project目前都是基于Spring Boot来构建，后续会持续更多的应用操作。
+本Project持续提供常见应用的包装类，目前包括：redis、kafka、mysql数据库读写分离操作、swagger的demo使用等等。该Project目前都是基于Spring Boot来构建，后续会持续更多的应用操作。<br>
 
 1、tianti-kafka。<br>
   ![image](https://raw.githubusercontent.com/xujeff/tianti-tool/master/screenshots/tianti-kafka.png)  
