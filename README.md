@@ -34,7 +34,7 @@
  （6）、src/main/resources------tianti-redis配置文件层。<br>
 
 4、tianti-swagger。<br>
-  ![image](https://raw.githubusercontent.com/xujeff/tianti-tool/master/screenshots/tianti-swagger.png) 
+  ![image](https://raw.githubusercontent.com/xujeff/tianti-tool/master/screenshots/tianti-swagger.png) <br>
  （1）、SwaggerApplication.java------swagger启动类。<br>
  （2）、package com.jeff.tianti.tool.swagger.config------配置层。<br>
  （3）、package com.jeff.tianti.tool.swagger.controller------控制层。<br>
